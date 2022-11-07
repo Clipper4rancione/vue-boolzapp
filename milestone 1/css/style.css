@@ -3,6 +3,9 @@
     background-color: greenyellow;
     border: 1px solid black;
 }
+.active {
+    background-color: #e9ebeb;
+}
 /*  GENERAL */
 
 body {
@@ -43,13 +46,7 @@ main {
     /* color debug */
     background-color: white;
 }
-.chat-nav-left {
-    width: 30%;
-    height: 100%;
 
-    /* color debug */
-    background-color: aquamarine;
-}
 .chat-display-right {
     width: 70%;
     height: 100%;
@@ -82,21 +79,30 @@ main {
     color: #b1b1b1;
     cursor: pointer;
 }
+
+/* /APP HEADER */
+
+
+/* LEFT SIDE */
+
+.chat-nav-left {
+    height: 100%;
+    width: 30%;
+}
 .chat-nav-left .app-header {
     border-right: 1px solid #b1b1b1;
 }
-/* /APP HEADER */
 
-/* NOTIFICATION WARNING */
+    /* NOTIFICATION WARNING */
+
 .notice-warn {
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 70px;
-    padding: 10px;
-    background-color: #8edafc;
+    padding: 6px;
 
+    background-color: #8edafc;
 }
+
 .notice-img {
     display: flex;
     justify-content: center;
@@ -113,7 +119,7 @@ main {
 .notif-text {
     display: flex;
     flex-direction: column;
-    margin-left: 5px;
+    margin-left: 8px;
 }
 .notice-text{
     font-size: .9rem;
@@ -123,17 +129,55 @@ main {
     cursor: pointer;
     text-decoration: underline;
 }
-/* //NOTIFICATION WARNING */
+    /* //NOTIFICATION WARNING */
 
-/* CHAT BODY */
+    /* SEARCH CHAT */
+.search-chat {
+    padding: 10px;
+    background-color: white;
+}
+.search-chat i {
+    font-size: 1rem;
+    color: #b1b1b1;
+}
+.search-chat input {
+    border: none;
+    width: 95%;
+}
+    /* //SEARCH CHAT */
+
+    /* CHAT HISTORY */
+.history-wrap {
+    width: 100%;
+    height: 741px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.contact {
+    width: 100%;
+    height: calc(100% / 10);
+    cursor: pointer;
+}
+.history-wrap .profile-text 
+.hour,
+.last-msg {
+    font-size: .8rem;
+    color: #b1b1b1;
+} 
+
+    /* //CHAT HISTORY */
+
+/* //LEFT SIDE */
+
+/* RIGHT SIDE */
+
+
+    /* CHAT BODY */
 
 .chat-wrap {
     width: 90%;
     height: calc(90% - 60px);
-}
-
-/* //CHAT BODY */
-.chat-wrap {
     display: flex;
     flex-direction: column;
 }
@@ -167,7 +211,7 @@ main {
     background-color: white;
 }
 
-
+/* //CHAT BODY */
     /* //MESSAGE */
 
 /* INPUT SECTION */
@@ -189,7 +233,7 @@ main {
 }
 
 .write-a-message input {
-    width: 920px;
+    width: 980px;
     height: 45px;
     padding: 5px;
 
@@ -197,5 +241,5 @@ main {
     border-radius: 7px;
 }
 /* //INPUT SECTION */
-
+/* //RIGHT SIDE */
 
