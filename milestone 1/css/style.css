@@ -26,7 +26,11 @@ main {
 }
 
 .app-container {
-    
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 40px;
     /* debug */
     background-color: greenyellow;
     border: 1px solid black;
