@@ -141,10 +141,11 @@ main {
 
 .message {
     width: 250px;
-    height: 60px;
+    height: 55px;
     padding: 8px;
     margin-top: 15px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
 
     
@@ -158,13 +159,11 @@ main {
 }
 
 .message.sent {
-    float: right;
-
+    margin: 8px 0 0 auto;
     background-color: #d5f9ba;
 }
 .message.received {
-    float: left;
-
+    margin-left: 8px;
     background-color: white;
 }
 
@@ -178,5 +177,25 @@ main {
     height: 10%;
     background-color: #f3eeea;
 }
+.left-buttons i {
+    font-size: 1.4rem;
+    margin: 2px 10px;
+    color: #b1b1b1;
+}
+.vocal-note i {
+    font-size: 1.4rem;
+    margin-right: 20px;
+    color: #b1b1b1;
+}
+
+.write-a-message input {
+    width: 920px;
+    height: 45px;
+    padding: 5px;
+
+    border: none;
+    border-radius: 7px;
+}
+/* //INPUT SECTION */
 
 
