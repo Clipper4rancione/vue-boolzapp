@@ -55,7 +55,7 @@ main {
     height: 100%;
     
     /* color debug */
-    background-color: bisque;
+    background-image: url('../img/mine.jpg');
 }
 
 /* APP HEADER */
@@ -64,9 +64,10 @@ main {
     width: 100%;
     height: 60px;
     padding: 10px;
+    background-color: #eaeaea;
 }
 .user-pic {
-    width: 50px;
+    width: 45px;
     margin-right: 10px;
     
 }
@@ -75,4 +76,13 @@ main {
     border-radius: 50%;
 }
 
+.app-header .head-actions i {
+    margin-left: 15px;
+    font-size: 1.2rem;
+    color: #b1b1b1;
+    cursor: pointer;
+}
+.chat-nav-left .app-header {
+    border-right: 1px solid #b1b1b1;
+}
 /* /APP HEADER */
