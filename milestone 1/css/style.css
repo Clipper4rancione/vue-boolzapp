@@ -86,3 +86,41 @@ main {
     border-right: 1px solid #b1b1b1;
 }
 /* /APP HEADER */
+
+/* NOTIFICATION WARNING */
+.notice-warn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    background-color: #8edafc;
+
+}
+.notice-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+}
+.notice-img i {
+    font-size: 1.3rem;
+    color: #83d4fa;
+}
+.notif-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+.notice-text{
+    font-size: .9rem;
+}
+.notice-link {
+    font-size: .7rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* //NOTIFICATION WARNING */
