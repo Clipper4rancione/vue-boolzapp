@@ -124,3 +124,59 @@ main {
     text-decoration: underline;
 }
 /* //NOTIFICATION WARNING */
+
+/* CHAT BODY */
+
+.chat-wrap {
+    width: 90%;
+    height: calc(90% - 60px);
+}
+
+/* //CHAT BODY */
+.chat-wrap {
+    display: flex;
+    flex-direction: column;
+}
+    /* MESSAGE */
+
+.message {
+    width: 250px;
+    height: 60px;
+    padding: 8px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+
+    
+    border-radius: 12px;
+}
+.message .text-date {
+    font-size: .65rem;
+    text-align: right;
+
+    color: #858585;
+}
+
+.message.sent {
+    float: right;
+
+    background-color: #d5f9ba;
+}
+.message.received {
+    float: left;
+
+    background-color: white;
+}
+
+
+    /* //MESSAGE */
+
+/* INPUT SECTION */
+
+.input-wrap {
+    width: 100%;
+    height: 10%;
+    background-color: #f3eeea;
+}
+
+
