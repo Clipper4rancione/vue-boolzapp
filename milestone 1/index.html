@@ -91,17 +91,19 @@
                     
                     <!-- SEZIONE CHAT -->
                     <div class="chat-wrap">
-                        <div class="message sent">
-                            <div class="text">We dove stai?</div>
-                            <div class="text-date">12:45</div>
-                        </div>
-                        <div class="message sent">
-                            <div class="text">??????</div>
-                            <div class="text-date">12:47</div>
-                        </div>
-                        <div class="message received">
-                            <div class="text">A casa, ci vediamo?</div>
-                            <div class="text-date">12:50</div>
+                        <div class="chatbox" v-for="message in contacts.messages">
+                            <div class="message" :class="received">
+                                <div class="text">{{message.text}}</div>
+                                <div class="text-date">{{message.hour}}</div>
+                            </div>
+                            <div class="message sent">
+                                <div class="text">{{message.text}}</div>
+                                <div class="text-date">{{message.hour}}</div>
+                            </div>
+                            <div class="message received">
+                                <div class="text">A casa, ci vediamo?</div>
+                                <div class="text-date">12:50</div>
+                            </div>
                         </div>
                     </div>
                     <!-- //SEZIONE CHAT -->
