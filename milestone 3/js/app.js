@@ -227,6 +227,8 @@ createApp({
                 status: 'sent'
             }    
             if(this.newMsg.length > 0){
+                this.contacts[this.activeChat].messages.push(newMessage);
+                this.newMsg = '';
             }
         }
         
