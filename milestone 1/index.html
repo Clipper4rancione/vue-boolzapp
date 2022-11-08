@@ -91,18 +91,12 @@
                     
                     <!-- SEZIONE CHAT -->
                     <div class="chat-wrap">
-                        <div class="chatbox" v-for="message in contacts.messages">
-                            <div class="message" :class="received">
-                                <div class="text">{{message.text}}</div>
+                        <div class="chatbox" 
+                        v-for="message in contacts[activeChat].messages"
+                        >
+                            <div class="message">
+                                <div class="text">{{message.message}}</div>
                                 <div class="text-date">{{message.hour}}</div>
-                            </div>
-                            <div class="message sent">
-                                <div class="text">{{message.text}}</div>
-                                <div class="text-date">{{message.hour}}</div>
-                            </div>
-                            <div class="message received">
-                                <div class="text">A casa, ci vediamo?</div>
-                                <div class="text-date">12:50</div>
                             </div>
                         </div>
                     </div>
@@ -113,7 +107,6 @@
                     <div class="input-wrap d-flex align-items-center justify-content-between">
                         <div class="left-buttons d-flex">
                             <i class="fa-regular fa-face-smile"></i>
-                            <i class="fa-solid fa-paperclip"></i>
                         </div>
                         <div class="write-a-message">
                             <input type="text" placeholder="Scrivi un messaggio">

@@ -2,7 +2,8 @@ const { createApp } = Vue;
 
 createApp({
     data(){
-        return{
+        return {
+            activeChat: 0,
             contacts: [
                 {
                     name: 'Simona',
@@ -213,6 +214,8 @@ createApp({
                     ]
                 },
             ]
+          
+
         }
     }
 
