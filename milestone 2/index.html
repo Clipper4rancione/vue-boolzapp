@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script src="https://unpkg.com/vue@3"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Booltsapp</title>
 </head>
@@ -52,10 +52,14 @@
                     </div>
                     <!-- CRONOLOGIA CHAT -->
                     <div class="history-wrap">
-                        <div class="contact py-2 px-2"  v-for="(contact, index) in contacts">
+                        <div 
+                        class="contact py-2 px-2" 
+                        v-for="(contact, index) in contacts"
+                        @click="activeChat = index"
+                        >
                             <div class="profile d-flex align-items-center">
                                 <div class="user-pic" >
-                                    <img src="img/avatar_8.jpg" alt="">
+                                    <img :src="contact.avatar + '.jpg'" alt="">
                                  </div>
 
                                  <div class="profile-text w-100">
@@ -63,7 +67,8 @@
                                         <span class="name">{{contact.name}}</span>
                                         <span class="hour">{{contact.messages.hour}}</span>
                                     </div>
-                                     <div class="last-msg">Ultimo messaggio inviato</div>
+                                     <span class="last-msg">{{contact.messages.date}}
+                                     </span>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +82,7 @@
                     <div class="app-header d-flex justify-content-between">
                         <div class="profile d-flex align-items-center">
                             <div class="user-pic">
-                                <img src="img/avatar_8.jpg" alt="">
+                                <img :src="contacts[activeChat].avatar + '.jpg'" alt="">
                              </div>
                             <span class="name">Simona</span>
                             <span class="last-access"></span>
@@ -91,18 +96,10 @@
                     
                     <!-- SEZIONE CHAT -->
                     <div class="chat-wrap">
-                        <div class="chatbox" v-for="message in contacts.messages">
+                        <div class="chatbox" v-for="message in contacts[activeChat].messages">
                             <div class="message" :class="received">
                                 <div class="text">{{message.text}}</div>
                                 <div class="text-date">{{message.hour}}</div>
-                            </div>
-                            <div class="message sent">
-                                <div class="text">{{message.text}}</div>
-                                <div class="text-date">{{message.hour}}</div>
-                            </div>
-                            <div class="message received">
-                                <div class="text">A casa, ci vediamo?</div>
-                                <div class="text-date">12:50</div>
                             </div>
                         </div>
                     </div>
@@ -113,7 +110,6 @@
                     <div class="input-wrap d-flex align-items-center justify-content-between">
                         <div class="left-buttons d-flex">
                             <i class="fa-regular fa-face-smile"></i>
-                            <i class="fa-solid fa-paperclip"></i>
                         </div>
                         <div class="write-a-message">
                             <input type="text" placeholder="Scrivi un messaggio">
@@ -132,7 +128,8 @@
         </div>
     </main>
 
-    <script src="https://unpkg.com/vue@3"></script>
-    <script src="js/app.js"></script>
+   
 </body>
+<script src="js/app.js"></script>
+
 </html>
