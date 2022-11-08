@@ -67,7 +67,7 @@
                                         <span class="name">{{contact.name}}</span>
                                         <span class="hour">{{contact.messages.hour}}</span>
                                     </div>
-                                     <span class="last-msg">{{contact.messages.date}}
+                                     <span class="last-msg">Ultimo messaggio ricevuto
                                      </span>
                                 </div>
                             </div>
@@ -96,8 +96,11 @@
                     
                     <!-- SEZIONE CHAT -->
                     <div class="chat-wrap">
-                        <div class="chatbox" v-for="message in contacts[activeChat].messages">
-                            <div class="message" :class="received">
+                        <div class="chatbox">
+                            <div class="message" 
+                            v-for="message in contacts[activeChat].messages"
+                            :class="message.status"
+                            >
                                 <div class="text">{{message.text}}</div>
                                 <div class="text-date">{{message.hour}}</div>
                             </div>
