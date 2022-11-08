@@ -3,7 +3,8 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
-            activeChat:0,
+            activeChat: 0,
+            newMsg: '',
             contacts: [
                 {
                     name: 'Simona',
@@ -215,6 +216,20 @@ createApp({
                 },
             ]
         }
+    },
+    methods: {
+        
+        writeMessage(){
+            const newMessage = {
+                date: '06/08/2022',
+                hour: '12:50',
+                text: this.newMsg,
+                status: 'sent'
+            }    
+            if(this.newMsg.length > 0){
+            }
+        }
+        
     }
 
 }).mount('#app')
