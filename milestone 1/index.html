@@ -51,8 +51,8 @@
                         <input type="text" placeholder="Cerca o inizia una chat">
                     </div>
                     <!-- CRONOLOGIA CHAT -->
-                    <div class="history-wrap" v-for="(contact, index) in contacts">
-                        <div class="contact py-2 px-2">
+                    <div class="history-wrap">
+                        <div class="contact py-2 px-2"  v-for="(contact, index) in contacts">
                             <div class="profile d-flex align-items-center">
                                 <div class="user-pic" >
                                     <img src="img/avatar_8.jpg" alt="">
@@ -61,7 +61,7 @@
                                  <div class="profile-text w-100">
                                      <div class="name-hour d-flex justify-content-between">
                                         <span class="name">{{contact.name}}</span>
-                                        <span class="hour"></span>
+                                        <span class="hour">{{contact.messages.hour}}</span>
                                     </div>
                                      <div class="last-msg">Ultimo messaggio inviato</div>
                                 </div>
