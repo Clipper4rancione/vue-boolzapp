@@ -246,13 +246,7 @@ createApp({
                 }
                 this.contacts[this.activeChat].messages.push(AIanswer);
             }
-        },
-        search(){
-            if(this.contacts.name.includes(keyPressed)){
-                    
-            };
-        }
-        
+        },        
     },
     mounted(){
         
