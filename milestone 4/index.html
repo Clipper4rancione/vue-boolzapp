@@ -60,11 +60,11 @@
                             <div class="history">
                                 <div 
                                 v-show="contact.name.toLowerCase().includes(keyPressed.toLowerCase())"
-                                class="contact py-2 px-2" 
+                                class="contact" 
                                 v-for="(contact, index) in contacts"
                                 @click="activeChat = index"
                                 >
-                                    <div class="profile d-flex align-items-center">
+                                    <div class="profile">
                                         <div class="user-pic" >
                                             <img :src="contact.avatar + '.jpg'" alt="">
                                         </div>
@@ -73,10 +73,10 @@
                                             <div 
                                                 class="name-hour d-flex justify-content-between">
                                                 <span class="name">{{contact.name}}</span>
-                                                <span class="hour">{{contact.messages.hour}}</span>
+                                                <span class="hour">{{contact.messages.date}}</span>
                                             </div>
-                                            <span class="last-msg">Ultimo messaggio ricevuto
-                                            </span>
+                                            <p class="last-msg">Ultimo messaggio ricevuto
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
