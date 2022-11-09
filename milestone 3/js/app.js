@@ -232,7 +232,8 @@ createApp({
                 this.newMsg = '';
                 this.isSend = 1;
             }
-            this.autoAnswer();
+            setTimeout(this.autoAnswer, 3000);
+            
         },
         autoAnswer(){
             if(this.isSend = 'true') {
