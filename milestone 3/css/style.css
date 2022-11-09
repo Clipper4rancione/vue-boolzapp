@@ -41,10 +41,6 @@ main {
     display: flex;
     height: 95%;
     width: 90%;
-    margin: 0 auto;
-
-    /* color debug */
-    background-color: white;
 }
 
 .chat-display-right {
@@ -153,11 +149,13 @@ main {
     display: flex;
     flex-direction: column;
     overflow: auto;
+    background-color: white;
 }
 .contact {
     width: 100%;
-    height: calc(100% / 10);
+    height: calc(100% / 9);
     cursor: pointer;
+    border-bottom: 1px solid #b1b1b1;
 }
 .history-wrap .profile-text 
 .hour,

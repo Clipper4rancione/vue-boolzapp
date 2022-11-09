@@ -60,15 +60,16 @@
                             <div class="profile d-flex align-items-center">
                                 <div class="user-pic" >
                                     <img :src="contact.avatar + '.jpg'" alt="">
-                                 </div>
+                                </div>
 
-                                 <div class="profile-text w-100">
-                                     <div class="name-hour d-flex justify-content-between">
+                                <div class="profile-text w-100">
+                                    <div 
+                                        class="name-hour d-flex justify-content-between">
                                         <span class="name">{{contact.name}}</span>
                                         <span class="hour">{{contact.messages.hour}}</span>
                                     </div>
-                                     <span class="last-msg">Ultimo messaggio ricevuto
-                                     </span>
+                                    <span class="last-msg">Ultimo messaggio ricevuto
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +85,7 @@
                             <div class="user-pic">
                                 <img :src="contacts[activeChat].avatar + '.jpg'" alt="">
                              </div>
-                            <span class="name">Simona</span>
+                            <span class="name">{{contacts[activeChat].name}}</span>
                             <span class="last-access"></span>
                         </div>
                         <div class="head-actions d-flex align-items-center">
