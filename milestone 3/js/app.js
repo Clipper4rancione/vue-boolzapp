@@ -5,6 +5,7 @@ createApp({
         return{
             activeChat: 0,
             newMsg: '',
+            isSend: 'false',
             contacts: [
                 {
                     name: 'Simona',
@@ -219,7 +220,7 @@ createApp({
     },
     methods: {
         
-        writeMessage(){
+        writeMessage(isSend){
             const newMessage = {
                 date: '06/08/2022',
                 hour: '12:50',
@@ -229,9 +230,25 @@ createApp({
             if(this.newMsg.length > 0){
                 this.contacts[this.activeChat].messages.push(newMessage);
                 this.newMsg = '';
+                this.isSend = 'true'
+            }
+
+        },
+        autoAnswer(){
+            if(this.isSend = 'true') {
+                const AIanswer = {
+                    date: '09/08/2022',
+                    hour: '12:54',
+                    text: 'OK!',
+                    status: 'received'
+                }
+                this.contacts[this.activeChat].messages.push(AIanswer);
             }
         }
         
+    },
+    mounted(){
+        this.autoAnswer();
     }
 
 }).mount('#app')
