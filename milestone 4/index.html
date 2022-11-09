@@ -53,13 +53,13 @@
                                 type="text" 
                                 placeholder="Cerca o inizia una chat"
                                 v-model="keyPressed"
-                                @keyup="search()"
                                 >
                         </div>
                         <!-- CRONOLOGIA CHAT -->
                         <div class="history-wrap">
                             <div class="history">
                                 <div 
+                                v-show="contact.name.toLowerCase().includes(keyPressed.toLowerCase())"
                                 class="contact py-2 px-2" 
                                 v-for="(contact, index) in contacts"
                                 @click="activeChat = index"
