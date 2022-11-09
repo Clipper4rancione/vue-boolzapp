@@ -48,7 +48,11 @@
 
                     <div class="search-chat">
                         <i class="bi bi-search"></i>
-                        <input type="text" placeholder="Cerca o inizia una chat">
+                        <input 
+                            type="text" 
+                            placeholder="Cerca o inizia una chat"
+                            @keyup='keyChar'
+                            >
                     </div>
                     <!-- CRONOLOGIA CHAT -->
                     <div class="history-wrap">

@@ -6,6 +6,7 @@ createApp({
             activeChat: 0,
             newMsg: '',
             isSend: 0,
+            keyChar: '',
             contacts: [
                 {
                     name: 'Simona',
@@ -232,11 +233,11 @@ createApp({
                 this.newMsg = '';
                 this.isSend = 1;
             }
-            setTimeout(this.autoAnswer, 3000);
+            setTimeout(this.autoAnswer, 1500);
             
         },
         autoAnswer(){
-            if(this.isSend = 'true') {
+            if(this.isSend = 1) {
                 const AIanswer = {
                     date: '09/08/2022',
                     hour: '12:54',
@@ -245,6 +246,9 @@ createApp({
                 }
                 this.contacts[this.activeChat].messages.push(AIanswer);
             }
+        },
+        searchContact(){
+            
         }
         
     },
