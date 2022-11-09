@@ -5,7 +5,7 @@ createApp({
         return{
             activeChat: 0,
             newMsg: '',
-            isSend: 'false',
+            isSend: 0,
             contacts: [
                 {
                     name: 'Simona',
@@ -230,9 +230,9 @@ createApp({
             if(this.newMsg.length > 0){
                 this.contacts[this.activeChat].messages.push(newMessage);
                 this.newMsg = '';
-                this.isSend = 'true'
+                this.isSend = 1;
             }
-
+            this.autoAnswer();
         },
         autoAnswer(){
             if(this.isSend = 'true') {
@@ -248,7 +248,7 @@ createApp({
         
     },
     mounted(){
-        this.autoAnswer();
+        
     }
 
 }).mount('#app')
