@@ -232,8 +232,8 @@ createApp({
                 this.contacts[this.activeChat].messages.push(newMessage);
                 this.newMsg = '';
                 this.isSend = 1;
+                setTimeout(this.autoAnswer, 1000);
             }
-            setTimeout(this.autoAnswer, 1000);
             
         },
         autoAnswer(){
